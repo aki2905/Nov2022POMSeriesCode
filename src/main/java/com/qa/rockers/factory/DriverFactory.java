@@ -42,7 +42,7 @@ public class DriverFactory {
 		String browserName = prop.getProperty("browser").toLowerCase().trim();
 		// String browserName = system.getProperty("browser");
 
-		System.out.println("browser name is : " + browserName);
+		System.out.println("The browser name is : " + browserName);
 		if (browserName.equalsIgnoreCase("chrome")) {
 			// driver = new ChromeDriver(optionsManager.getChromeOptions());
 			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
@@ -64,7 +64,7 @@ public class DriverFactory {
 		}
 
 		else {
-			System.out.println("plz pass the right browser name...." + browserName);
+			System.out.println("Please pass the right browser name...." + browserName);
 			throw new FrameworkException("NO BROWSER FOUND EXCEPTION....");
 		}
 
