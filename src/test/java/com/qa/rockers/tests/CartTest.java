@@ -4,5 +4,7 @@ public class CartTest {
 	
 	int i=10;
 	int j=20;
+	
+	String status ="code";
 
 }
