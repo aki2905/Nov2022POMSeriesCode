@@ -6,5 +6,7 @@ public class CartTest {
 	int j=20;
 	
 	String status ="code";
+	
+	int k =29;
 
 }
