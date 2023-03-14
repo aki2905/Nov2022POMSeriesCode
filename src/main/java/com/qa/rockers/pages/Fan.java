@@ -6,6 +6,7 @@ public class Fan {
 		System.out.println("fan");
 		int a=10;
 		System.out.println(""+a);
+		System.out.println("HI");
 	}
 
 }
