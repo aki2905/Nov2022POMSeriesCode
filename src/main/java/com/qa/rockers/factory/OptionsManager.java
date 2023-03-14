@@ -28,7 +28,7 @@ public class OptionsManager {
 
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
-			System.out.println("Running in incognito mode");
+			System.out.println("==Running in incognito mode==");
 			co.addArguments("--incognito");
 		}
 		co.addArguments("--remote-allow-origins=*");
