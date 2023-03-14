@@ -22,13 +22,16 @@ public class OptionsManager {
 	
 	public ChromeOptions getChromeOptions() {
 		co = new ChromeOptions();
-		if(Boolean.parseBoolean(prop.getProperty("headless").trim()))
-			{
+		if (Boolean.parseBoolean(prop.getProperty("headless").trim())) {
 			System.out.println("=========Running chrome in headless==========");
 			co.addArguments("--headless");
-			
-			}
-		if(Boolean.parseBoolean(prop.getProperty("incognito").trim())) co.addArguments("--incognito");
+
+		}
+		if (Boolean.parseBoolean(prop.getProperty("incognito").trim())) {
+			System.out.println("==Running in incognito mode==");
+			co.addArguments("--incognito");
+		}
+		co.addArguments("--remote-allow-origins=*");
 		return co;
 	}
 	
