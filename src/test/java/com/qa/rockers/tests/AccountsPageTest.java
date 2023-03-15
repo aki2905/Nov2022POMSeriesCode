@@ -57,7 +57,7 @@ public class AccountsPageTest extends BaseTest {
 			{"Apple"},
 			{"Samsung"}
 		};
-	}
+}
 	
 	@Test(dataProvider = "getProductData")
 	public void searchProductCountTest(String searchKey) {
