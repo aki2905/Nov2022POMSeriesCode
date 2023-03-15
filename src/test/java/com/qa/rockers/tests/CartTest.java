@@ -10,6 +10,7 @@ public class CartTest {
 	int k =29;
 	
 	String name ="Nishant";
+	String city ="Delhi";
 	
 
 }
