@@ -8,5 +8,8 @@ public class CartTest {
 	String status ="code";
 	
 	int k =29;
+	
+	String name ="Nishant";
+	
 
 }
