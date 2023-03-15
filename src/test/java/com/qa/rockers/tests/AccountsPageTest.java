@@ -56,9 +56,7 @@ public class AccountsPageTest extends BaseTest {
 			{"iMac"},
 			{"Apple"},
 			{"Samsung"},
-			
-				
-		};
+			};
 	}
 	
 	@Test(dataProvider = "getProductData")
