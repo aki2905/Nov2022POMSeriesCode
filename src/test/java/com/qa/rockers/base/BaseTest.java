@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.qa.rockers.factory.DriverFactory;
@@ -28,18 +29,27 @@ public class BaseTest {
 	protected RegisterPage registerPage;
 
 	
-	protected SoftAssert softAssert;
+protected SoftAssert softAssert;
 	
 	
-	@BeforeTest
-	public void setup() {
-		df = new DriverFactory();
-		prop = df.initProp();
-		driver = df.initDriver(prop);
-		loginPage = new LoginPage(driver);
-		softAssert = new SoftAssert();
+@Parameters({"browser", "browserversion", "testcasename"})
+@BeforeTest
+public void setup(String browserName, String browserVersion, String testCaseName) {
+	df = new DriverFactory();
+	prop = df.initProp();
+	
+		if(browserName!=null) {
+			prop.setProperty("browser", browserName);
+			prop.setProperty("browserversion", browserVersion);
+			prop.setProperty("testcasename", testCaseName);
 
-	}
+		}
+	
+	
+	driver = df.initDriver(prop);
+	loginPage = new LoginPage(driver);
+	softAssert = new SoftAssert();
+} 
 
 	@AfterTest
 	public void tearDown() {
