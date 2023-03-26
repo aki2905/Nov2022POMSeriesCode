@@ -1,4 +1,4 @@
-package pom.qa.rockers.exception;
+package com.qa.rockers.exception;
 
 public class FrameworkException extends RuntimeException{
 	
