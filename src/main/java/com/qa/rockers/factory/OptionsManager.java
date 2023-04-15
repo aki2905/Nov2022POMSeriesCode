@@ -21,7 +21,7 @@ public class OptionsManager {
 
 	public ChromeOptions getChromeOptions() {
 		co = new ChromeOptions();
-		co.addArguments("--remote-allow-origins=*");
+//		co.addArguments("--remote-allow-origins=*");
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setBrowserVersion(prop.getProperty("browserversion"));
@@ -41,6 +41,7 @@ public class OptionsManager {
 	}
 
 	public FirefoxOptions getFirefoxOptions() {
+		System.out.println("Firefox options are available");
 		fo = new FirefoxOptions();
 		if (Boolean.parseBoolean(prop.getProperty("headless").trim()))
 			fo.addArguments("--headless");
@@ -50,6 +51,7 @@ public class OptionsManager {
 	}
 
 	public EdgeOptions getEdgeOptions() {
+		System.out.println("Edge Options");
 		eo = new EdgeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("headless").trim()))
 			eo.addArguments("--headless");

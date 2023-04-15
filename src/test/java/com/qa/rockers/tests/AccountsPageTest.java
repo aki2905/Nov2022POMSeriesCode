@@ -2,6 +2,7 @@ package com.qa.rockers.tests;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -11,6 +12,8 @@ import com.qa.rockers.base.BaseTest;
 import com.qa.rockers.constants.AppConstants;
 
 public class AccountsPageTest extends BaseTest {
+	
+	 private final Logger logger = Logger.getLogger(AccountsPageTest.class);
 
 	@BeforeClass
 	public void accPageSetup() {
